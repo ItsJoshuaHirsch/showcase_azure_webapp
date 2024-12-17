@@ -21,7 +21,7 @@ jobs:
     - name: Build the Project
       run: |
         cd backend/azure_app # Navigate to the folder containing the solution
-        dotnet publish azure_app.sln -c Release -o ../../publish # Output to a folder accessible by subsequent steps
+        dotnet publish azure_app.sln -c Release -o ../../publish
 
 
     - name: Deploy to Azure App Service
