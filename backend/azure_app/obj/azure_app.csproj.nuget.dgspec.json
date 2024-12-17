@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joshu\\Documents\\Projects\\Showcase\\backend\\azure_app\\azure_app.csproj": {}
+    "C:\\Users\\Joshu\\Source\\Repos\\showcase_azure_webapp\\backend\\azure_app\\azure_app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joshu\\Documents\\Projects\\Showcase\\backend\\azure_app\\azure_app.csproj": {
+    "C:\\Users\\Joshu\\Source\\Repos\\showcase_azure_webapp\\backend\\azure_app\\azure_app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joshu\\Documents\\Projects\\Showcase\\backend\\azure_app\\azure_app.csproj",
+        "projectUniqueName": "C:\\Users\\Joshu\\Source\\Repos\\showcase_azure_webapp\\backend\\azure_app\\azure_app.csproj",
         "projectName": "azure_app",
-        "projectPath": "C:\\Users\\Joshu\\Documents\\Projects\\Showcase\\backend\\azure_app\\azure_app.csproj",
+        "projectPath": "C:\\Users\\Joshu\\Source\\Repos\\showcase_azure_webapp\\backend\\azure_app\\azure_app.csproj",
         "packagesPath": "C:\\Users\\Joshu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joshu\\Documents\\Projects\\Showcase\\backend\\azure_app\\obj\\",
+        "outputPath": "C:\\Users\\Joshu\\Source\\Repos\\showcase_azure_webapp\\backend\\azure_app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.ApplicationInsights.AspNetCore": {
+              "target": "Package",
+              "version": "[2.22.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

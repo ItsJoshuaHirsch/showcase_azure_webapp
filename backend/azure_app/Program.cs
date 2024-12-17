@@ -1,4 +1,10 @@
+using azure_app;
+using Microsoft.ApplicationInsights.Extensibility;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add Application Insights Telemetry
+builder.Services.AddApplicationInsightsTelemetry();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -15,8 +21,22 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
+
+// Middleware to track user connections
+app.Use(async (context, next) =>
+{
+    var connectionId = context.Connection.Id;
+
+    // Add the connection ID when a user connects
+    LiveTrafficTracker.AddConnection(connectionId);
+
+    await next();
+
+    // Remove the connection ID after the request is complete
+    LiveTrafficTracker.RemoveConnection(connectionId);
+});
+
 
 app.UseAuthorization();
 

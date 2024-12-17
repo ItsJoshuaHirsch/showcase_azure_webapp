@@ -7,6 +7,9 @@ namespace azure_app.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+        public int ActiveUsers { get; private set; }
+
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -14,7 +17,7 @@ namespace azure_app.Pages
 
         public void OnGet()
         {
-
+            ActiveUsers = LiveTrafficTracker.GetActiveUserCount();
         }
     }
 }

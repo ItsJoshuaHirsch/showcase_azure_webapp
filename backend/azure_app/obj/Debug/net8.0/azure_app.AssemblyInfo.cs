@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("azure_app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+041b495297a30bd3115ee05d65374fab18c0f416")]
 [assembly: System.Reflection.AssemblyProductAttribute("azure_app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("azure_app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
