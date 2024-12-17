@@ -1,0 +1,7 @@
+C:\Users\Joshu\Documents\Projects\Showcase\backend\azure_app\obj\Release\net8.0\linux-x64\PubTmp\Out\azure_app
+C:\Users\Joshu\Documents\Projects\Showcase\backend\azure_app\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\Joshu\Documents\Projects\Showcase\backend\azure_app\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.json
+C:\Users\Joshu\Documents\Projects\Showcase\backend\azure_app\obj\Release\net8.0\linux-x64\PubTmp\Out\azure_app.dll
+C:\Users\Joshu\Documents\Projects\Showcase\backend\azure_app\obj\Release\net8.0\linux-x64\PubTmp\Out\azure_app.deps.json
+C:\Users\Joshu\Documents\Projects\Showcase\backend\azure_app\obj\Release\net8.0\linux-x64\PubTmp\Out\azure_app.runtimeconfig.json
+C:\Users\Joshu\Documents\Projects\Showcase\backend\azure_app\obj\Release\net8.0\linux-x64\PubTmp\Out\azure_app.pdb

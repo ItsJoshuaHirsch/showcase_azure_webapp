@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "S/DB8RBV3Kk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Joshu\\Documents\\Projects\\Showcase\\backend\\azure_app\\azure_app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Joshu\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.11\\microsoft.netcore.app.host.linux-x64.8.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
