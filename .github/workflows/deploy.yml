@@ -20,7 +20,8 @@ jobs:
 
     - name: Build the Project
       run: |
-        dotnet publish -c Release -o publish
+        cd backend/azure_app # Navigate to the folder containing the solution file
+        dotnet publish azure_app.sln -c Release -o publish
 
     - name: Deploy to Azure App Service
       uses: azure/webapps-deploy@v2
