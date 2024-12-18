@@ -20,8 +20,8 @@ resource "azurerm_resource_group" "demo_rg" {
 
 # App Service
 resource "azurerm_service_plan" "demo_app_plan" {
-  os_type  = "Windows"
-  sku_name = "F1"     # Free = F1, Scalable = S1
+  os_type             = "Windows"
+  sku_name            = "F1" # Free = F1, Scalable = S1
   name                = "showcase-web-app-service-plan"
   location            = azurerm_resource_group.demo_rg.location
   resource_group_name = azurerm_resource_group.demo_rg.name
@@ -38,8 +38,15 @@ resource "azurerm_windows_web_app" "demo_app" {
   resource_group_name = azurerm_resource_group.demo_rg.name
   service_plan_id     = azurerm_service_plan.demo_app_plan.id
 
+  site_config {
+    always_on = false
+    worker_count = 1
+    container_registry_use_managed_identity = false
+    http2_enabled = false
+  }
+
   app_settings = {
-    "WEBSITE_RUN_FROM_PACKAGE" = "1"
+    "WEBSITE_RUN_FROM_PACKAGE"                        = "1"
     "APPINSIGHTS_INSTRUMENTATIONKEY"                  = "a85610bc-67e5-4d8b-acea-127e6a718a87"
     "APPINSIGHTS_PROFILERFEATURE_VERSION"             = "1.0.0"
     "APPINSIGHTS_SNAPSHOTFEATURE_VERSION"             = "1.0.0"
