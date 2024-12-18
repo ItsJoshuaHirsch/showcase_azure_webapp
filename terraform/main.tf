@@ -39,10 +39,16 @@ resource "azurerm_windows_web_app" "demo_app" {
   service_plan_id     = azurerm_service_plan.demo_app_plan.id
 
   site_config {
-    always_on = false
-    worker_count = 1
+    always_on                               = false
+    worker_count                            = 1
     container_registry_use_managed_identity = false
-    http2_enabled = false
+    http2_enabled                           = false
+
+    virtual_application {
+      physical_path = "site\\wwwroot"
+      preload       = false
+      virtual_path  = "/"
+    }
   }
 
   app_settings = {
