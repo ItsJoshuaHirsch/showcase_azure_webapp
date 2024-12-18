@@ -37,6 +37,19 @@ resource "azurerm_app_service" "demo_app" {
 
   app_settings = {
     "WEBSITE_RUN_FROM_PACKAGE" = "1"
+    "APPINSIGHTS_INSTRUMENTATIONKEY"                  = "a85610bc-67e5-4d8b-acea-127e6a718a87"
+    "APPINSIGHTS_PROFILERFEATURE_VERSION"             = "1.0.0"
+    "APPINSIGHTS_SNAPSHOTFEATURE_VERSION"             = "1.0.0"
+    "APPLICATIONINSIGHTS_CONNECTION_STRING"           = "InstrumentationKey=a85610bc-67e5-4d8b-acea-127e6a718a87;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/;ApplicationId=9311c549-33f6-4ca5-ba42-338ba5595c5b"
+    "ApplicationInsightsAgent_EXTENSION_VERSION"      = "~2"
+    "DiagnosticServices_EXTENSION_VERSION"            = "~3"
+    "InstrumentationEngine_EXTENSION_VERSION"         = "~1"
+    "SnapshotDebugger_EXTENSION_VERSION"              = "~2"
+    "XDT_MicrosoftApplicationInsights_BaseExtensions" = "disabled"
+    "XDT_MicrosoftApplicationInsights_Java"           = "disabled"
+    "XDT_MicrosoftApplicationInsights_Mode"           = "recommended"
+    "XDT_MicrosoftApplicationInsights_NodeJS"         = "disabled"
+    "XDT_MicrosoftApplicationInsights_PreemptSdk"     = "disabled"
   }
 }
 
