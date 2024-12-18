@@ -14,23 +14,23 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "demo_rg" {
-  name     = "razor-pages-us-rg"
-  location = "East US"
+  name     = "rg-showcase-eu"
+  location = "West Europe"
 }
 
 # App Service
 resource "azurerm_app_service_plan" "demo_app_plan" {
-  name                = "razor-pages-app-service-plan"
+  name                = "showcase-web-app-service-plan"
   location            = azurerm_resource_group.demo_rg.location
   resource_group_name = azurerm_resource_group.demo_rg.name
   sku {
-    tier = "Free"
-    size = "F1"
+    tier = "Free"     # Standard, Free
+    size = "F1"       # S1, F1
   }
 }
 
 resource "azurerm_app_service" "demo_app" {
-  name                = format("demo-web-app-%s", "test-hirsch-demo-newtf")
+  name                = format("showcase-web-app-%s", "hirsch")
   location            = azurerm_resource_group.demo_rg.location
   resource_group_name = azurerm_resource_group.demo_rg.name
   app_service_plan_id = azurerm_app_service_plan.demo_app_plan.id
