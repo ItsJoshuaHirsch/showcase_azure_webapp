@@ -32,11 +32,11 @@ resource "azurerm_service_plan" "demo_app_plan" {
 
 }
 
-resource "azurerm_app_service" "demo_app" {
+resource "azurerm_windows_web_app" "demo_app" {
   name                = format("showcase-web-app-%s", "hirsch")
   location            = azurerm_resource_group.demo_rg.location
   resource_group_name = azurerm_resource_group.demo_rg.name
-  app_service_plan_id = azurerm_service_plan.demo_app_plan.id
+  service_plan_id     = azurerm_service_plan.demo_app_plan.id
 
   app_settings = {
     "WEBSITE_RUN_FROM_PACKAGE" = "1"
@@ -57,5 +57,5 @@ resource "azurerm_app_service" "demo_app" {
 }
 
 output "app_service_url" {
-  value = azurerm_app_service.demo_app.default_site_hostname
+  value = azurerm_windows_web_app.demo_app.default_hostname
 }
